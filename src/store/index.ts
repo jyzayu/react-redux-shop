@@ -8,10 +8,15 @@ import { useSelector } from "react-redux";
 
 export const store = configureStore({
     reducer: {
-
+       product: productReducer,
+        cart: cartReducer,
+        user: userReducer,
+        categories: categoriesReducer,
+       products: productsReducer
     }
 })
 
 
 export type RootState = ReturnType<typeof store.getState>
 export type AppDispatch = typeof store.dispatch;
+   

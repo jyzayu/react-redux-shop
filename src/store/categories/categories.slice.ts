@@ -8,9 +8,10 @@ export const categoriesSlice = createSlice({
     name: "category",
     initialState,
     reducers: {
-        
+        setActiveCategory: (_, action: PayloadAction<CategoriesName>) => action.payload
     }
 })
 
 
+export const { setActiveCategory } = categoriesSlice.actions;
 export default categoriesSlice.reducer;
